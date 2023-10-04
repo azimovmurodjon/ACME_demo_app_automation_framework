@@ -7,8 +7,8 @@ public class LoginPage {
 
     private final WebDriver driver;
 
-    private final By usernameInput = By.id("Admin");
-    private final By passwordInput = By.id("admin");
+    private final By usernameInput = By.id("username");
+    private final By passwordInput = By.id("password");
     private final By loginButton = By.id("log-in");
     private final By errorMessage = By.cssSelector(".alert-warning");
 
