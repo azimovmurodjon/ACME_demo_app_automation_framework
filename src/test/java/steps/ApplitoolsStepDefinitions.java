@@ -7,18 +7,21 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import pages.Acme_main_page;
 import pages.LoginPage;
 
 public class ApplitoolsStepDefinitions {
 
     private WebDriver driver;
     private LoginPage loginPage;
+    private Acme_main_page acme_main_page;
 
     @Given("I open the Applitools demo login page")
     public void iOpenLoginPage() {
         WebDriverManager.firefoxdriver().setup();
         driver = new FirefoxDriver();
         loginPage = new LoginPage(driver);
+        acme_main_page = new Acme_main_page(driver);
         driver.get("https://demo.applitools.com/");
     }
 
